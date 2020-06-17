@@ -1,0 +1,105 @@
+header {
+  height: 2em;
+  width: 100vw;
+  padding-top: 2vh;
+  display: flex;
+  align-items: baseline;
+  /* align-content: space-around; */
+  /* background-color: rgb(241, 241, 241); */
+  position: relative;
+  
+  z-index: 99;
+}
+ul {
+  padding: 0;
+  /* margin: 0; */
+}
+.logo-container {
+   display: flex;
+   /* align-items: baseline ; */
+}
+.logo-container h1 {
+   font-family: Helvetica, sans-serif;
+   font-weight: 100;
+   text-transform: uppercase;
+   line-height: 1em;
+   /* color: rgba(21, 255, 0, 0.322); */
+   width: 200px;
+   margin-right: 100px;
+   margin: 0 0 0 1vw;
+   overflow-wrap: normal;
+}
+.logo {
+  height: 60px;
+  margin: 0 0 0 5vw;
+}
+.navigation {
+  height: min-content;
+  padding-top: .2em !important;
+  /* position: absolute;
+  right: 0; */
+  margin: 0 0 0 2vw;
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  width: 50vw;
+  display: flex;
+ 
+}
+.navigation li {
+  height: min-content;
+  margin: 0;
+  padding: .1em .5em 0 .5em;
+}
+.navigation li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+}
+.navigation li a:hover {
+  color: rgb(0, 0, 0);
+}
+.photographers-dropdown{
+  z-index: 9;
+  height: 2em;
+  overflow: hidden;
+}
+.photographers-dropdown li {
+   padding-top: .1em;
+}
+.show {
+  /* z-index: 99; */
+  padding-bottom: 3vh;
+  height: min-content;
+  overflow: visible;
+  /* border-radius: 10px; */
+  background-color: rgb(255, 255, 255);
+}
+  
+.photographers-dropdown li {
+   height: min-content;
+  font-size: .7em;
+  text-transform: none;
+  display: block;
+}
+.photographers-dropdown a {
+  line-height: 1.6em;
+  font-weight: 400;
+  letter-spacing: .1em;
+  margin: 0 0 0 .4em;
+  color: white;
+}
+#dropdown-open {
+  margin-bottom: .5em;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#dropdown-open:hover {
+  color: rgb(0, 0, 0);
+  /* opacity: 1; */
+}
+.photographers-dropdown li a:hover {
+  color: rgb(238, 89, 89);
+}

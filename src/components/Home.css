@@ -1,0 +1,62 @@
+.home {
+        height: 62vh;
+        /* text-align: center; */
+        margin-top: 8vh;
+}
+.home p {
+   width: 88vw;
+   font-family: Helvetica, sans-serif;
+   font-weight: 100;
+   letter-spacing: .1em;
+   margin: 2em 0 0 5vw;
+   color: rgba(0, 0, 0, 0.4);
+}
+.home a {
+   text-decoration: none;
+   font-weight: 700;
+   color: rgba(0, 0, 0, 0.562);
+}
+.home a:hover {
+   color: black;
+}
+.collage-container {
+   opacity: .8;
+}
+.collage1 {
+   display: flex;
+   flex-wrap: nowrap;
+   margin: 0 0 0 10vw;
+   width: min-content;
+   overflow: hidden;
+   /* opacity: .8; */
+   background-color: rgba(255, 218, 5, 0.377);
+}
+.collage2 {
+   display: flex;
+   flex-wrap: nowrap;
+   margin: 0 0 0 14vw;
+   width: min-content;
+   overflow: hidden;
+   /* opacity: .5; */
+   background-color: rgba(128, 31, 1, 0.411);
+}
+.collage3 {
+   display: flex;
+   flex-wrap: nowrap;
+   margin: 0 0 0 18vw;
+   width: min-content;
+   overflow: hidden;
+   /* opacity: .2; */
+   background-color: rgba(70, 186, 240, 0.322);
+}
+.image-box {
+   height: 2.9em;
+   width: 2.9em;
+   overflow: hidden;
+   margin: .1em;
+   padding: 0;
+}
+.image-box img {
+   height: 4.3em;
+   opacity: .8;
+}

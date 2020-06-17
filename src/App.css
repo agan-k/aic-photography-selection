@@ -1,0 +1,7 @@
+body{
+width: 100vw;
+}
+li {
+        display: inline;
+        padding: 10px;
+}

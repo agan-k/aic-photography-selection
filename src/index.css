@@ -1,0 +1,13 @@
+html {
+  height: 100vh;
+  margin: 0;
+  font-family: Helvetica;
+  color: rgba(0, 0, 0, 0.671);
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
