@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import AboutArbus from "./AboutArbus"
 import Modal from "../../Modal"
 import Slide from "../../Slide"
-import manuel from "../../assets/manuel.jpg"
 import local_photos from '../../local_photos'
 
 class Arbus extends Component {

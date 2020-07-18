@@ -5,7 +5,8 @@
 }
 .home p {
    width: 88vw;
-   font-family: Helvetica, sans-serif;
+   /* font-family: Helvetica, sans-serif; */
+   font-family: Hoefler Text;
    font-weight: 100;
    letter-spacing: .1em;
    margin: 2em 0 0 5vw;
