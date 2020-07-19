@@ -7,7 +7,7 @@ export default class Slide extends Component {
     super(props)
     this.state = {
       count: 0,
-      //for 'slide' effect only. uncomment line 108 & 112
+      //for 'slide' effect only. uncomment lines 106 - 112
       // in #SharedStyle.css to use the effect. (comment out fadeIn)
       slideRight: false,
       slideLeft: false
@@ -25,7 +25,7 @@ export default class Slide extends Component {
       {
         count: this.state.count + 1,
         slideRight: true,
-        slideCurrent: true
+        slideLeft: false
       })
   }
   
@@ -69,14 +69,15 @@ export default class Slide extends Component {
         <div  className="slide" >
             
           {this.props.current_collection.map((photo, key) => {
+            //  let current_photo = photo
             if (this.props.current_collection.indexOf(photo) === this.state.count) {
-              console.log(photo)
+            //   console.log(current_photo)
               return (
               
                 <div className={`${this.state.slideRight ?
                   "slide-right" :
                   "slide-left"} slide-img-container`}
-                  key={photo.id}>
+                  key={photo.id}> 
                   <img src={photo.thumbnail.url + imgPar} alt='' />
                   <h3>{photo.title}</h3>
                   <p>{photo.thumbnail.alt_text}</p>
