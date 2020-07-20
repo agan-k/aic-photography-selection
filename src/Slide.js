@@ -7,10 +7,6 @@ export default class Slide extends Component {
     super(props)
     this.state = {
       count: 0,
-      //for 'slide' effect only. uncomment lines 106 - 112
-      // in #SharedStyle.css to use the effect. (comment out fadeIn)
-      slideRight: false,
-      slideLeft: false
     }
     this.nextImage = this.nextImage.bind(this);
     this.previousImage = this.previousImage.bind(this);
@@ -23,18 +19,14 @@ export default class Slide extends Component {
   nextImage() {
     this.setState(
       {
-        count: this.state.count + 1,
-        slideRight: true,
-        slideLeft: false
+        count: this.state.count + 1
       })
   }
   
   previousImage() {
     this.setState(
       {
-        count: this.state.count - 1,
-        slideLeft: true,
-        slideRight: false,
+        count: this.state.count - 1
       })
   }
 
@@ -69,14 +61,10 @@ export default class Slide extends Component {
         <div  className="slide" >
             
           {this.props.current_collection.map((photo, key) => {
-            //  let current_photo = photo
             if (this.props.current_collection.indexOf(photo) === this.state.count) {
-            //   console.log(current_photo)
               return (
               
-                <div className={`${this.state.slideRight ?
-                  "slide-right" :
-                  "slide-left"} slide-img-container`}
+                <div className='slide-img-container'
                   key={photo.id}> 
                   <img src={photo.thumbnail.url + imgPar} alt='' />
                   <h3>{photo.title}</h3>
@@ -85,7 +73,6 @@ export default class Slide extends Component {
               )
              }
             return ''
-            
           })}  
         </div>
       </div>
