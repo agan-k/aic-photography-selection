@@ -32,12 +32,14 @@ class Header extends React.Component {
   render() {
       return (
          <header>
-            <div className="logo-container">
-               <img className="logo" src={logo}/>
-               <h1>Photography Collection</h1>
-            </div>
+            <Link to='/'>
+               <div className="logo-container">
+                  <img className="logo" src={logo}/>
+                  <h1>Photography Collection</h1>
+               </div>
+            </Link>
           <ul className="navigation">
-            <li><Link to="/">Home</Link></li>
+            {/* <li><Link to="/">Home</Link></li> */}
     
             <ul
               

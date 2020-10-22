@@ -119,7 +119,7 @@ background-color: rgb(235, 235, 235);
 .slide-img-container img{
   display: block;
   margin: 0 auto;
-  height: 30em;
+  max-height: 30em;
 }
 .arrow {
   position: fixed;
@@ -130,14 +130,13 @@ background-color: rgb(235, 235, 235);
   cursor: pointer;
   margin: 0;
   opacity: .3;
+  top: 45vh;
 }
 .arrow.next{
 right: 10vw;
-top: 45vh;
 }
 .arrow.back{
 left: 10vw;
-top: 45vh;
 }
 .close {
   position: absolute;
@@ -181,3 +180,62 @@ top: 45vh;
  font-style: italic;
  margin: 0 0 0 .1em;
 }
+/* =========== Media Query ======== */
+
+@media only screen and (max-width: 375px) {
+   /* ==========  ABOUT  ================ */
+   .main {
+      display: initial;
+   }
+   .about {
+      margin: 18vh 0 0 0;
+      width: 100%;
+    }
+
+   .image-container {
+      height: 3em;
+      width: 3em;
+      overflow: hidden;
+      padding: 1em;
+      }
+
+   .image-gallery {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-items: space-between;
+      flex-wrap: wrap;
+      z-index: 0;
+      }
+      .slide {
+         height: 100%;
+         width: 100%;
+         margin: 20% auto;
+       }
+       .slide-img-container {
+         height: 100%;
+         width: 95%;
+       }
+      .slide-img-container img{
+         width: 100%;
+       }
+
+      .arrow {
+         width: min-content;
+         font-size: 2em;
+         color: white;
+         background: rgba(128, 128, 128, 0.335);
+         padding: .3em;
+         opacity: .5;
+         top: 25%;
+       }
+       .arrow.next{
+         right: 2%;
+         text-align: right;
+       }
+       .arrow.back{
+         left: 2%;
+       }
+}
+
+

@@ -10,6 +10,10 @@ header {
   
   z-index: 99;
 }
+header a {
+   text-decoration: none;
+   color: inherit;
+}
 ul {
   padding: 0;
   /* margin: 0; */
@@ -29,7 +33,7 @@ ul {
    margin: 0 0 0 1vw;
    overflow-wrap: normal;
 }
-.logo {
+.logo-container img {
   height: 60px;
   margin: 0 0 0 5vw;
 }
@@ -78,7 +82,7 @@ ul {
 }
   
 .photographers-dropdown li {
-   height: min-content;
+  height: min-content;
   font-size: .7em;
   text-transform: none;
   display: block;
@@ -103,3 +107,28 @@ ul {
 .photographers-dropdown li a:hover {
   color: rgb(238, 89, 89);
 }
+
+
+
+/* =========== Media Query ======== */
+
+@media only screen and (max-width: 375px) {
+   header {
+      width: 100%;
+      padding-top: 0;
+      display: initial;
+    }
+    
+   .logo-container img {
+     height: 60px;
+     margin: 0;
+   }
+   .navigation {
+      width: 100%;
+      font-size: 1.4em;
+      margin: 0;
+   }
+}
+
+
+

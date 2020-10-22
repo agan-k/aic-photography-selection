@@ -23,11 +23,11 @@ class Winogrand extends Component {
     });
   
   };
-  closeModal = () => {
-    this.setState({
-      isShowing: false,
-    });
-  };
+//   closeModal = () => {
+//     this.setState({
+//       isShowing: false,
+//     });
+//   };
   closeSlide = () => {
     this.setState({
       isShowing: false,

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 
 // =========== PHOTOGRAPHERS =============================
+import Photogs from "./components/Photogs"
 import Winogrand from "./components/Winogrand/Winogrand"
 import Arbus from "./components/Arbus/Arbus"
 import Koudelka from "./components/Koudelka/Koudelka"
@@ -28,9 +29,10 @@ import "./App.css";
 import './SharedStyle.css'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  constructor() {
+    super();
+     this.state = {
+      navigationLinkSelect: null, 
       winogrand_collection: [],
       arbus_collection: [],
       koudelka_collection: [],
@@ -45,20 +47,26 @@ class App extends Component {
       bravo_collection: [],
       levitt_collection: [],
       brandt_collection: []
-    };
+    }
   }
 
-  componentDidMount() {
-    axios
-      .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=winogrand&limit=50"
-      )
-      .then((response) => {
-        this.setState({
-          winogrand_collection: response.data.data,
-        });
-        console.log(response);
-      });
+   componentDidMount() {
+      axios
+         .get(
+            "https://aggregator-data.artic.edu/api/v1/artworks/search?q=winogrand&limit=50"
+         )
+         .then((response) => {
+            this.setState({
+               winogrand_collection: response.data.data,
+            });
+            console.log(response);
+         });
+     
+      // handleNavigationLinkSelect = () => {
+      //    this.setState({
+      //       navigationLinkSelect: item
+      //    })
+      // }   
     
       axios
       .get(
@@ -207,12 +215,21 @@ class App extends Component {
     return (
       <div className="App">
        
-          <Header />
+          <Header
+            navigationLinkSelect={this.state.navigationLinkSelect}
+          />
           
           <Switch>
             <Route exact path="/">
-            <Home collection={this.state.winogrand_collection}/>
+                <Home/>
+             </Route>
+             
+            <Route exact path="/photogs">
+                <Photogs />
             </Route>
+             
+
+
             <Route path="/winogrand">
               <Winogrand collection={this.state.winogrand_collection} />
             </Route>
@@ -261,7 +278,7 @@ class App extends Component {
             </Route>
           </Switch>
        
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

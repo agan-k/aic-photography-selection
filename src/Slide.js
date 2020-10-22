@@ -44,31 +44,29 @@ export default class Slide extends Component {
       </div>
     )
    
-    let imgPar = "/full/600,/0/default.jpg";{/* required endpoint for the "iiif" image distribution. */}
+    {/* required endpoint for the "iiif" image distribution. */ }
+     const imgPar = "/full/600,/0/default.jpg";
 
     return (
       <div className="slide-container">
-        <div className='close'
-          onClick={this.props.closeSlide}>
-          &times; 
+        <div className='close' onClick={this.props.closeSlide}>
+             &times; 
         </div>
+          
         {this.state.count !== (this.props.current_collection.length - 1) ?
-            <NextArrow nextImage={this.nextImage} /> :
-            ''}
+            <NextArrow nextImage={this.nextImage} /> : ''}
         {this.state.count !== 0 ?
-            <BackArrow previousImage={this.previousImage} /> :
-            ''}
-        <div  className="slide" >
+             <BackArrow previousImage={this.previousImage} /> : ''}
+          
+        <div  className="slide">
             
-          {this.props.current_collection.map((photo, key) => {
-            if (this.props.current_collection.indexOf(photo) === this.state.count) {
-              return (
-              
-                <div className='slide-img-container'
-                  key={photo.id}> 
-                  <img src={photo.thumbnail.url + imgPar} alt='' />
-                  <h3>{photo.title}</h3>
-                  <p>{photo.thumbnail.alt_text}</p>
+        {this.props.current_collection.map((item) => {
+         if (this.props.current_collection.indexOf(item) === this.state.count) {
+            return (
+                <div className='slide-img-container' key={item.id}> 
+                   <img src={item.thumbnail.url + imgPar} alt='' />
+                   <h3>{item.title}</h3>
+                   <p>{item.thumbnail.alt_text}</p>
                 </div>
               )
              }

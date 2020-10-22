@@ -1,11 +1,9 @@
 .home {
-        height: 62vh;
-        /* text-align: center; */
-        margin-top: 8vh;
+   height: min-content;
+   margin-top: 8vh;
 }
 .home p {
    width: 88vw;
-   /* font-family: Helvetica, sans-serif; */
    font-family: Hoefler Text;
    font-weight: 100;
    letter-spacing: .1em;
@@ -60,4 +58,13 @@
 .image-box img {
    height: 4.3em;
    opacity: .8;
+}
+
+@media only screen and (max-width: 375px) {
+   
+   .home p {
+      width: 90%;
+      background-color: white;
+      
+   }
 }

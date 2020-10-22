@@ -1,6 +1,6 @@
 footer {
   position: absolute;
-  /* bottom: 0; */
+  bottom: 0;
   width: 100vw;
   height: 12vh;
   margin: 5vh 0 0 0;
@@ -21,4 +21,16 @@ footer p{
 footer a {
   text-decoration: none;
   color: rgb(238, 89, 89);
+}
+@media only screen and (max-width: 375px) {
+   footer {
+      height: min-content;
+      margin: 0;
+      padding: 0;
+      z-index: -1;
+   }
+   footer p{
+      margin: 1em auto;
+      text-align: center;
+    }
 }
