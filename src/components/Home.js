@@ -2,21 +2,7 @@ import React from 'react'
 import 'font-awesome/css/font-awesome.css'
 import './Home.css'
 //==================================
-import diane from '../assets/diane.jpg'
-import brandt from '../assets/brandt.jpg'
-import bruce from '../assets/bruce.jpg'
-import frank from '../assets/frank.jpg'
-import garry2 from '../assets/garry2.jpeg'
-import helen from '../assets/helen.jpg'
-import henri from '../assets/henri.jpg'
-import koudelka from '../assets/koudelka.jpg'
-import lee from '../assets/lee.jpg'
-import lisette from '../assets/lisette.jpg'
-import manuel from '../assets/manuel.jpg'
-import sally from '../assets/sally.jpg'
-import saul from '../assets/saul.jpg'
-import walker from '../assets/walker.jpg'
-import aic from '../assets/aic-logo.gif'
+import bus from '../assets/bus.jpg'
 //==================================
 import local_photos from '../local_photos'
 
@@ -30,7 +16,9 @@ class Home extends React.Component {
    //    console.log(local_photo)
     return (
        <div className="home">
-          
+          <div className='banner'>
+            <img src={bus} />
+          </div>
        
           <p>
              AIC Photography Collection is a growing selection of artwork accessible for viewing trough

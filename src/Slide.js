@@ -45,7 +45,7 @@ export default class Slide extends Component {
     )
    
     {/* required endpoint for the "iiif" image distribution. */ }
-     const imgPar = "/full/600,/0/default.jpg";
+     const imgPar = "/full/800,/0/default.jpg";
 
     return (
       <div className="slide-container">
