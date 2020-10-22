@@ -44,6 +44,7 @@ opacity: 0;
 
 /* ==========  ABOUT  ================ */
 .main {
+  height: min-content;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

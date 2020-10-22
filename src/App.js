@@ -278,7 +278,7 @@ class App extends Component {
             </Route>
           </Switch>
        
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }
