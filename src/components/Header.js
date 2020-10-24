@@ -6,23 +6,21 @@ import logo from '../assets/aic-logo.gif'
 
 
 class Header extends React.Component {
-  constructor() {
+  constructor(props) {
     super() 
     this.state = {
       isShowing: false
     }
-    this.showDropdown = this.showDropdown.bind(this)
-    this.closeDropdown = this.closeDropdown.bind(this)
   }
 
-  showDropdown() {
+  showDropdown = () => {
     
     this.setState({
       isShowing: true
     });
   };
 
-  closeDropdown() {
+  closeDropdown = () => {
     
     this.setState({
       isShowing: false
@@ -38,18 +36,15 @@ class Header extends React.Component {
                   <h1>Photography Collection</h1>
                </div>
             </Link>
-          <ul className="navigation">
-            {/* <li><Link to="/">Home</Link></li> */}
-    
+          <ul className="navigation">    
             <ul
-              
               onMouseEnter={this.showDropdown}
               onMouseLeave={this.closeDropdown}
               className = {`${this.state.isShowing ?
-                  "show" : ""} photographers-dropdown`
-              }>
-              <li onClick={this.showDropdown}id="dropdown-open">Photographers</li>
-              <li onClick={this.closeDropdown}><Link to="/winogrand">Garry Winogrand</Link></li>
+                  "show" : ""} photographers-dropdown`}>
+               <li onClick={this.showDropdown} id="dropdown-open">Photographers</li>
+               <div onClick={this.closeDropdown}><Link to='/photogs'>{this.props.photogs_list}</Link></div>
+              {/* <li onClick={this.closeDropdown}><Link to="/winogrand">Garry Winogrand</Link></li>
               <li onClick={this.closeDropdown}><Link to="/arbus">Diane Arbus</Link></li>
               <li onClick={this.closeDropdown}><Link to="/koudelka">Josef Koudelka</Link></li>
               <li onClick={this.closeDropdown}><Link to="/friedlander">Lee Friedlander</Link></li>
@@ -62,7 +57,7 @@ class Header extends React.Component {
               <li onClick={this.closeDropdown}><Link to="/model">Lisette Model</Link></li>
               <li onClick={this.closeDropdown}><Link to="/bravo">Manuel Alvarez Bravo</Link></li>
               <li onClick={this.closeDropdown}><Link to="/levitt">Hellen Levitt</Link></li>
-              <li onClick={this.closeDropdown}><Link to="/brandt">Bill Brandt</Link></li>
+              <li onClick={this.closeDropdown}><Link to="/brandt">Bill Brandt</Link></li> */}
             </ul>
     
             <li><Link to="/Links">Links</Link></li>

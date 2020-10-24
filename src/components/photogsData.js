@@ -39,7 +39,7 @@ const photogsData = [
    },
    {
       id: 2,
-      api: 'https://aggregator-data.artic.edu/api/v1/artworks/search?q=winogrand&limit=50',
+      api: 'https://aggregator-data.artic.edu/api/v1/artworks/search?q=diane%20arbus&limit=5',
       name: 'Diane Arbus',
       bio_pic: diane,
       about_body: [
@@ -100,7 +100,7 @@ const photogsData = [
    },
    {
       id: 3,
-      api: 'https://aggregator-data.artic.edu/api/v1/artworks/search?q=winogrand&limit=50',
+      api: 'https://aggregator-data.artic.edu/api/v1/artworks/search?q=josef%20koudelka',
       name: 'Josef Koudelka',
       bio_pic: koudelka,
       about_body: [
