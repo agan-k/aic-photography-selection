@@ -28,9 +28,10 @@ class Home extends React.Component {
              <a href="https://sales.artic.edu/memberships"> becoming a member today</a>.
           </p>
           <br/>
-          <hr style={{ width: '90%', opacity: '.2'}}/>
-          <h2>Featurd Artist</h2>
           <div className='featured'>
+          <h3>Featurd Artist</h3>
+          <span>December 2020</span>
+          <hr style={{ width: '90%', opacity: '.2'}}/>
              <Frank collection={this.props.collection}/>
           </div>
       </div>
