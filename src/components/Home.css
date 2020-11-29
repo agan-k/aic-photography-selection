@@ -1,22 +1,26 @@
 .home {
-   height: 100vh;
-   margin-top: 8vh;
+   height: min-content;
+   margin-top: 0;
+}
+.home .banner {
+   height: 20em;
+   overflow: hidden;
 }
 .home .banner img {
+   margin-top: -5em;
    width: 100%;
    opacity: .8;
 }
 .home p {
-   width: 96%;
+   width: 90%;
    font-family: Hoefler Text;
-   font-size: 1.2em;
+   font-size: 1em;
    font-weight: 100;
    letter-spacing: .1em;
-   margin: -4em auto;
+   margin: 0 auto;
    color: rgba(0, 0, 0, 0.555);
-   /* background-color: rgba(248, 210, 129, 0.479); */
    padding: 2%;
-   padding-top: 4em;
+   padding-top: 2em;
 }
 .home a {
    text-decoration: none;
@@ -26,55 +30,36 @@
 .home a:hover {
    color: black;
 }
-.collage-container {
-   opacity: .8;
-}
-.collage1 {
-   display: flex;
-   flex-wrap: nowrap;
-   margin: 0 0 0 10vw;
-   width: min-content;
-   overflow: hidden;
-   /* opacity: .8; */
-   background-color: rgba(255, 218, 5, 0.377);
-}
-.collage2 {
-   display: flex;
-   flex-wrap: nowrap;
-   margin: 0 0 0 14vw;
-   width: min-content;
-   overflow: hidden;
-   /* opacity: .5; */
-   background-color: rgba(128, 31, 1, 0.411);
-}
-.collage3 {
-   display: flex;
-   flex-wrap: nowrap;
-   margin: 0 0 0 18vw;
-   width: min-content;
-   overflow: hidden;
-   /* opacity: .2; */
-   background-color: rgba(70, 186, 240, 0.322);
-}
-.image-box {
-   height: 2.9em;
-   width: 2.9em;
-   overflow: hidden;
-   margin: .1em;
-   padding: 0;
-}
-.image-box img {
-   height: 4.3em;
-   opacity: .8;
-}
+
 
 @media only screen and (max-width: 375px) {
+   .home .banner {
+      height: 7em;
+      margin-top: 2em;
+   }
    .home .banner img {
-      width: 100%;
       margin-top: -50px;
    }
    
    .home p {
+      width: 95%;
+      font-family: Hoefler Text;
       font-size: 1em;
+      font-weight: 100;
+      letter-spacing: .1em;
+      margin: 0;
+      color: rgba(0, 0, 0, 0.555);
+   }
+   .home p a {
+      text-decoration: underline;
+   }
+   .home h2 {
+      margin: 0 0 0 .5em;
+      opacity: .8;
+   }
+}
+@media only screen and (max-width: 320px) {
+   .home p {
+      padding-top: .5em;
    }
 }

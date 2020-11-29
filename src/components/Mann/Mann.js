@@ -1,68 +1,46 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 import AboutMann from "./AboutMann"
-import Modal from "../../Modal"
 import Slide from "../../Slide"
 
 class Mann extends Component {
   constructor(props) {
-    super(props);
-    console.log(props)
+    super()
     this.state = {
       isShowing: false,
-      workSelect: null,
-      titleSelect: null,
-      descSelect: null
     };
   }
-  handleSelect = (item, index) => {
+  handleSelectThumbnail = (item, index) => {
     this.setState({
       isShowing: true,
-      workSelect: item,
-      titleSelect: item,
-      descSelect: item,
       index: index
-    });
-  };
+    })
+  }
   closeModal = () => {
     this.setState({
       isShowing: false,
-    });
-  };
+    })
+  }
   closeSlide = () => {
     this.setState({
       isShowing: false,
-    });
-  };
+    })
+  }
   render() {
     let imgPar = "/full/300,/0/default.jpg"; {/* required endpoint for the iiif image distribution. */}
 
     const photo_selection = this.props.collection.map((item, index) =>
-         <div
-            style={{height: '10em', width: '10em', overflow: 'hidden', padding: '1em', opacity: '.5'}}
-            className="image-container"
-            key={item.id}
-            onClick={() => this.handleSelect(item, index)}
-          >
-            <img src={item.thumbnail.url + imgPar} style={{ height: '14em' }} />
-          </div>
-        )
+      <div className='thumbnail-container' >
+         <div className="thumbnail"
+               key={item.id}
+               onClick={() => this.handleSelectThumbnail(item, index)}>
+            <img src={item.thumbnail.url + imgPar}/>
+         </div>
+      </div> 
+      )
 
     return (
-      // ==== Use either 'Modal' or 'Slide' componenet for showing individual photos.
-      <div>
-        {/* <div className={` ${this.state.isShowing ? "fade-in" : ""} modal-container`}>
-          {this.state.isShowing && (
-   // =============== MODAL ======================
-             <Modal
-             closeModal={this.closeModal}
-            workDetail={this.state.workSelect}
-            title={this.state.titleSelect}
-            description={this.state.descSelect}
-            />
-            )}
-          </div> */}
+      <div className='main'>
         {this.state.isShowing && (
-   // =============== SLIDE ====================== 
            <Slide
             closeSlide={this.closeSlide}
             index={this.state.index}
@@ -70,14 +48,14 @@ class Mann extends Component {
           />
           )}
 
-        <div className={`${this.state.isShowing ? "fade-out" : ""} main`}>
-          <div className="image-gallery">
-            {photo_selection}
-          </div>
-          <AboutMann />
-        </div>
+         <AboutMann />
+         <div className={`${this.state.isShowing ? "fade-out" : ""} main`}>
+            <div className="image-gallery">
+               {photo_selection}
+            </div>
+         </div>
       </div>
-    );
+    )
   }
 }
 export default Mann;

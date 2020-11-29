@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import 'font-awesome/css/font-awesome.css'
-import './SharedStyle.css'
+// import './SharedStyle.css'
+import './Slide.css'
 
 export default class Slide extends Component {
   constructor(props) {
-    super(props)
+     super()
+     console.log(props)
     this.state = {
       count: 0,
     }
@@ -22,14 +24,13 @@ export default class Slide extends Component {
         count: this.state.count + 1
       })
   }
-  
   previousImage() {
     this.setState(
       {
         count: this.state.count - 1
       })
   }
-
+   
   render() {
     // ===========================
     const BackArrow = (props) => (
@@ -43,7 +44,6 @@ export default class Slide extends Component {
         <i className="fa fa-angle-right fa-1x" aria-hidden="true"></i>
       </div>
     )
-   
     {/* required endpoint for the "iiif" image distribution. */ }
      const imgPar = "/full/800,/0/default.jpg";
 
@@ -53,17 +53,18 @@ export default class Slide extends Component {
              &times; 
         </div>
           
-        {this.state.count !== (this.props.current_collection.length - 1) ?
-            <NextArrow nextImage={this.nextImage} /> : ''}
-        {this.state.count !== 0 ?
-             <BackArrow previousImage={this.previousImage} /> : ''}
+        
           
-        <div  className="slide">
-            
+        <div className="slide">
+        {this.state.count !== 0 ?
+         <BackArrow previousImage={this.previousImage} /> : ''}
         {this.props.current_collection.map((item) => {
          if (this.props.current_collection.indexOf(item) === this.state.count) {
             return (
-                <div className='slide-img-container' key={item.id}> 
+               
+               <div className={`${item.thumbnail.height > item.thumbnail.width ? 'vertical' : ''} slide-img-caption-container`}
+                  // className='slide-img-container'
+                  key={item.id}> 
                    <img src={item.thumbnail.url + imgPar} alt='' />
                    <h3>{item.title}</h3>
                    <p>{item.thumbnail.alt_text}</p>
@@ -71,8 +72,13 @@ export default class Slide extends Component {
               )
              }
             return ''
-          })}  
-        </div>
+         })} 
+             
+          {this.state.count !== (this.props.current_collection.length - 1) ?
+         <NextArrow nextImage={this.nextImage} /> : ''}
+         </div>
+          
+          
       </div>
      )
    }

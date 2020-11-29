@@ -1,61 +1,43 @@
 header {
-  height: 2em;
-  width: 100vw;
+  height: 5em;
+  width: 100%;
   padding-top: 2vh;
   display: flex;
   align-items: baseline;
-  /* align-content: space-around; */
-  /* background-color: rgb(241, 241, 241); */
-  position: relative;
-  
-  z-index: 99;
 }
 header a {
    text-decoration: none;
    color: inherit;
 }
-ul {
-  padding: 0;
-  /* margin: 0; */
-}
 .logo-container {
    display: flex;
-   /* align-items: baseline ; */
 }
 .logo-container h1 {
    font-family: Helvetica, sans-serif;
    font-weight: 100;
    text-transform: uppercase;
    line-height: 1em;
-   /* color: rgba(21, 255, 0, 0.322); */
    width: 200px;
-   margin-right: 100px;
    margin: 0 0 0 1vw;
    overflow-wrap: normal;
 }
 .logo-container img {
   height: 60px;
-  margin: 0 0 0 5vw;
+  margin: 0 0 0 .2em;
+}
+.mobile-navigation {
+   display: none;
 }
 .navigation {
   height: min-content;
-  padding-top: .2em !important;
-  /* position: absolute;
-  right: 0; */
+  width: 50vw;
   margin: 0 0 0 2vw;
   font-family: Helvetica, sans-serif;
   font-size: 1em;
   font-weight: 100;
   color: rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
-  width: 50vw;
   display: flex;
- 
-}
-.navigation li {
-  height: min-content;
-  margin: 0;
-  padding: .1em .5em 0 .5em;
 }
 .navigation li a {
   text-decoration: none;
@@ -65,22 +47,33 @@ ul {
   color: rgb(0, 0, 0);
 }
 .photographers-dropdown{
+  width: min-content;
   z-index: 9;
   height: 2em;
   overflow: hidden;
 }
-.photographers-dropdown li {
-   padding-top: .1em;
+
+.photographers-dropdown a {
+   margin: .8em;
 }
 .show {
-  /* z-index: 99; */
-  padding-bottom: 3vh;
+  padding-bottom: 1em;
+  width: min-content;
   height: min-content;
   overflow: visible;
-  /* border-radius: 10px; */
   background-color: rgb(255, 255, 255);
+  width: 28vw;
 }
-  
+.photog-link {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: .5em;
+}
+.photog-link li {
+   padding: 0;
+   margin: 0;
+   min-width: 150px;
+}
 .photographers-dropdown li {
   height: min-content;
   font-size: .7em;
@@ -102,32 +95,82 @@ ul {
 }
 #dropdown-open:hover {
   color: rgb(0, 0, 0);
-  /* opacity: 1; */
 }
 .photographers-dropdown li a:hover {
   color: rgb(238, 89, 89);
 }
 
-
-
+.instagram {
+   height: 1.4em;
+   opacity: .4;
+}
+.instagram:hover {
+   opacity: 1;
+}
 /* =========== Media Query ======== */
 
 @media only screen and (max-width: 375px) {
    header {
       width: 100%;
       padding-top: 0;
-      display: initial;
+      flex-wrap: wrap;
+      /* display: initial; */
     }
-    
    .logo-container img {
      height: 60px;
      margin: 0;
    }
    .navigation {
-      width: 100%;
-      font-size: 1em;
-      margin: 0;
+      display: none;
    }
+   
+   .mobile-navigation {
+      display: initial;
+      height: min-content;
+      width: 100%;
+      margin: 0;
+      font-family: Helvetica, sans-serif;
+      font-size: 1.3em;
+      font-weight: 100;
+      color: rgba(0, 0, 0, 0.4);
+      text-transform: uppercase;
+      display: flex;
+    }
+    .mobile-navigation li a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.4);
+    }
+   .mobile-navigation .show {
+      padding-bottom: 1em;
+      width: min-content;
+      height: min-content;
+      overflow: visible;
+      background-color: rgb(255, 255, 255);
+    }
+    #dropdown-open:hover {
+       /* important! */
+      color: rgb(0, 0, 0, 0.4);
+    }
+    .photographers-dropdown a {
+      line-height: 2em;
+      font-weight: 400;
+      letter-spacing: .1em;
+      margin: 0 0 0 .4em;
+      color: white;
+    }
+    .mobile-navigation .instagram {
+       height: 2em;
+       margin-top: -.5em;
+    }
+}
+@media only screen and (max-width: 320px) {
+   .mobile-navigation {
+      font-size: 1.2em;
+   }
+   .mobile-navigation .instagram {
+     height: 1.5em;
+     margin-top: -.1em;
+  }
 }
 
 

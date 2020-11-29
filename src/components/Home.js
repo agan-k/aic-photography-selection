@@ -1,25 +1,19 @@
 import React from 'react'
-import 'font-awesome/css/font-awesome.css'
 import './Home.css'
-//==================================
 import bus from '../assets/bus.jpg'
-//==================================
-import local_photos from '../local_photos'
+import Frank from './Frank/Frank'
 
 class Home extends React.Component {
   constructor(props) {
-    super(props)
+    super()
     }
 
   render() {
-   //   const local_photo = local_photos.map(({id, src}) => <img key={id} src={src} />)
-   //    console.log(local_photo)
     return (
        <div className="home">
           <div className='banner'>
             <img src={bus} />
           </div>
-       
           <p>
              AIC Photography Collection is a growing selection of artwork accessible for viewing trough
              the <a href="https://www.artic.edu/open-access/public-api" target="_blank">Art Institute of Chicago public
@@ -28,12 +22,20 @@ class Home extends React.Component {
              while also asking questions. Questions about the life, society, as well as questions about the relevance of 
              the medium of Photography and what it, as an expressive channel, brings to the list of numerous other 
              mediums in the world of visual Art. 
-        </p>
-        
+             <br /><br />
+             This educational photography hub is made possible by Art Institute of Chicago and their public sharing of vast
+             art collection. Please visit the <a href="https://www.artic.edu/">official website</a> for more information and support thier work by
+             <a href="https://sales.artic.edu/memberships"> becoming a member today</a>.
+          </p>
+          <br/>
+          <hr style={{ width: '90%', opacity: '.2'}}/>
+          <h2>Featurd Artist</h2>
+          <div className='featured'>
+             <Frank collection={this.props.collection}/>
+          </div>
       </div>
     )
   }
-
 }
 export default Home; 
 
