@@ -163,20 +163,6 @@
    .vertical.slide-img-caption-container img{
       height: 300px;
     }
-    .arrow {
-       top: 450px;
-       opacity: .2;
-    }
-    .arrow.next{
-      right: 0px;
-      }
-    .arrow.back{
-      left: 140px;
-      }
-    .close {
-      
-       top: 464px;
-       right: 92px;
-    } 
+    
 }
  
