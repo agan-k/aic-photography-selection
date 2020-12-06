@@ -5,7 +5,7 @@ function AboutBrandt() {
   return (
     <div className="leiter about">
       <h2>Bill Brandt</h2>
-      <img style={{ height: "15em", opacity: ".7" }} src={brandt} />
+      <img src={brandt} />
         <p><strong>Bill Brandt</strong> (born Hermann Wilhelm Brandt; 2 May 1904 – 20 December 1983)[1]:14 was a British 
         photographer and photojournalist. Although born in Germany, Brandt moved to England, where he became known 
         for his images of British society for such magazine as Lilliput and Picture Post, later he made distorted 

@@ -15,12 +15,16 @@ function Footer() {
            <a href="https://sales.artic.edu/memberships">AIC - Become a member today.</a>
            {/* <img src={logo} /> */}
            <br />
-           site by:
-           {/* <a href="https://formversuscontent.com">FormVersusContent</a>©2020 */}
+           <div>
+              site by:
+               <div className='credit mobile'>
+                  &nbsp;<a href="https://formversuscontent.com">FormVersusContent</a>©2020
+               </div>
+           </div>
       </div>
         <div className='right section'>
-           <div>
-               <a href="https://formversuscontent.com" style={{ textTransform: 'none', color: 'rgb(238, 89, 89)' }}>&nbsp;FormVersusContent</a>©2020
+           <div className='credit desk-top'>
+               <a href="https://formversuscontent.com">&nbsp;FormVersusContent</a>©2020
            </div>
         {/* <img src={logo} /> */}
       </div>

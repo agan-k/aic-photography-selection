@@ -125,6 +125,7 @@ header a {
       width: 100%;
       padding-top: 0;
       flex-wrap: wrap;
+      height: 6.5em;
       /* display: initial; */
     }
    .logo-container img {

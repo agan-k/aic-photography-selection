@@ -6,7 +6,7 @@ function AboutArbus() {
   return (
     <div className="arbus about">
       <h2>Diane Arbus</h2>
-      <img style={{ width: "15em", height: "10em" }} src={diane} />
+      <img src={diane} />
       <p><strong>Diane Arbus</strong> (March 14, 1923 – July 26, 1971) was an
         American photographer. Arbus worked to normalize marginalized groups and
         highlight the importance of proper representation of all people. She

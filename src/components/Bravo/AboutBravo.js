@@ -6,7 +6,7 @@ function AboutBravo() {
   return (
     <div className="bravo about">
       <h2>Manuel Alvarez Bravo</h2>
-      <img style={{ width: "15em", height: "10em" }} src={manuel} />
+      <img src={manuel} />
         <p><strong>Manuel Álvarez Bravo</strong> (February 4, 1902 – October 19, 2002) was a Mexican artistic 
         photographer and one of the most important figures in 20th century Latin American photography. 
         He was born and raised in Mexico City. While he took art classes at the Academy of San Carlos, 

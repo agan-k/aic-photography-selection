@@ -6,7 +6,7 @@ function AboutEvans() {
   return (
     <div className="evans about">
       <h2>Walker Evans</h2>
-      <img style={{ height: "10em", opacity: ".7" }} src={walker} />
+      <img src={walker} />
       <p><strong>Walker Evans</strong> (November 3, 1903 – April 10, 1975) was an American 
       photographer and photojournalist best known for his work for the Farm Security Administration (FSA) 
       documenting the effects of the Great Depression. Much of Evans's work from the FSA period uses the 

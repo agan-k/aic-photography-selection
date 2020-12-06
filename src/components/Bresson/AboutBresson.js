@@ -5,7 +5,7 @@ function AboutBresson() {
   return (
     <div className="about bresson">
       <h2>Henri Cartier-Bresson</h2>
-      <img style={{width: "10em", height: "12em"}}src={henri} />
+      <img src={henri} />
       <p><strong>Henri Cartier-Bresson</strong> (August 22, 1908 – August 3, 2004) was a French 
       humanist photographer considered a master of candid photography, and an early user of 35mm film. 
       He pioneered the genre of street photography, and viewed photography as capturing a decisive moment.

@@ -78,6 +78,7 @@ transition: 1s;
 }
 .about img {
   float: left;
+  max-height: 10em;
   margin: 1vh 1em 0 1vw;
   border-radius: 8px;
   border: 1px solid black ;
@@ -122,11 +123,7 @@ transition: 1s;
       opacity: .4;
     }
     .about img {
-      float: left;
-      margin: 1vh 1em 0 1vw;
-      border-radius: 8px;
-      border: 1px solid black ;
-      opacity: .9;
+      max-height: 8em;
     }
     .about p {
       margin: 0;

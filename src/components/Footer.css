@@ -48,6 +48,13 @@ footer a {
 footer a:hover {
   opacity: 1;
 }
+.credit {
+   text-transform: none;
+   color: rgb(238, 89, 89);
+}
+.credit.mobile {
+   display: none;
+}
 @media only screen and (max-width: 375px) {
    footer {
       line-height: 1.5em;
@@ -62,6 +69,12 @@ footer a:hover {
     }
     footer .right {
        width: 10%;
+    }
+    .credit.desk-top {
+       display: none;
+    }
+    .credit.mobile {
+       display: initial;
     }
 
 }

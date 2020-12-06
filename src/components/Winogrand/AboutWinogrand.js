@@ -5,7 +5,7 @@ function AboutWinogrand() {
   return (
     <div className="about winogrand">
       <h2>Garry Winogrand</h2>
-      <img style={{width: "8em", height: "12em", opacity: ".8"}} src={garry} />
+      <img src={garry} />
         <p><strong>Garry Winogrand</strong> (14 January 1928 – 19 March 1984) was an American street photographer
         from the Bronx, New York, known for his portrayal of U.S. life and its social issues, in
         the mid-20th century. Though he photographed in California, Texas and elsewhere, Winogrand

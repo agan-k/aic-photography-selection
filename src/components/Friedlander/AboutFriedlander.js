@@ -5,7 +5,7 @@ function AboutFriedlander() {
   return (
     <div className="friedlander about">
       <h2>Lee Friedlander</h2>
-      <img style={{width: "15em", height: "10em"}} src={lee} />
+      <img src={lee} />
       <p>Lee Friedlander (born July 14, 1934) is an American photographer and artist.
       In the 1960s and 1970s, Friedlander evolved an influential and often imitated visual language
       of urban "social landscape," with many of his photographs including fragments of store-front

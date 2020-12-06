@@ -5,7 +5,7 @@ function AboutFrank() {
   return (
     <div className="about frank">
       <h2>Robert Frank</h2>
-      <img style={{width: "10em", height: "12em", opacity: ".7"}} src={frank} />
+      <img src={frank} />
       <p><strong>Robert Frank</strong> (November 9, 1924 – September 9, 2019) was a Swiss photographer and documentary 
       filmmaker, who became an American binational. His most notable work, the 1958 book titled <strong>The 
       Americans</strong>, earned Frank comparisons to a modern-day de Tocqueville for his fresh and nuanced 

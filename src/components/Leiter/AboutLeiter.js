@@ -5,7 +5,7 @@ function AboutLeiter() {
   return (
     <div className="leiter about">
       <h2>Saul Leiter</h2>
-      <img style={{ height: "10em", opacity: ".9" }} src={saul} />
+      <img src={saul} />
       <p><strong>Saul Leiter</strong> (December 3, 1923 – November 26, 2013) was an American photographer and painter 
         whose early work in the 1940s and 1950s was an important contribution to what came to be recognized 
         as the New York school of photography.

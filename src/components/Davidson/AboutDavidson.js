@@ -5,7 +5,7 @@ function AboutDavidson() {
   return (
     <div className="davidson about">
       <h2>Bruce Davidson</h2>
-      <img style={{ height: "10em" }} src={bruce} />
+      <img src={bruce} />
       <p><strong>Bruce Davidson</strong> (born September 5, 1933) is an American photographer. His photographs, 
       notably those taken in Harlem, New York City, have been widely exhibited and published. He is known for photographing 
       communities usually hostile to outsiders. After his military service, in 1957, Davidson worked briefly as a 

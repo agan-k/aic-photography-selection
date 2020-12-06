@@ -5,7 +5,7 @@ function AboutKoudelka() {
   return (
     <div className="about koudelka">
       <h2>Josef Koudelka</h2>
-      <img style={{width: "12em", height: "12em", opacity: ".8"}} src={koudelka} />
+      <img src={koudelka} />
       <p>
         Koudelka was born in 1938 in the small Moravian town of Boskovice, Czechoslovakia. He began 
         photographing his family and the surroundings with a 6×6 Bakelite camera. He studied at the 

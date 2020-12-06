@@ -6,7 +6,7 @@ function AboutModel() {
   return (
     <div className="about">
       <h2>Lisette Model</h2>
-      <img style={{ height: "10em" }} src={lisette} />
+      <img src={lisette} />
         <p><strong>Lisette Model</strong> (born Elise Amelie Felicie Stern; November 10, 1901 – March 30, 1983) was an 
         Austrian-born American photographer primarily known for the frank humanism of her street photography. A prolific 
         photographer in the 1940s and a member of the New-York cooperative <strong>Photo League</strong>, she was 

@@ -6,6 +6,7 @@ const Links = () => {
            
            <div className='links'>
               <div className="links-container">
+              <h2>Links:</h2>
               <a href="https://www.youtube.com/watch?v=wP6lP3UaP24" target="_blank">
                  <h3>Garry Winogrand at Rice University (Video) - Workshop/Masterclass</h3>
               </a>

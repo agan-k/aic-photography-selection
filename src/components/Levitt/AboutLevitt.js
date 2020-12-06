@@ -5,7 +5,7 @@ function AboutLeiter() {
   return (
     <div className="about">
       <h2>Helen Levitt</h2>
-      <img style={{ height: "10em", opacity: ".9" }} src={helen} />
+      <img src={helen} />
         <p><strong>Helen Levitt</strong> (August 31, 1913 – March 29, 2009) was an American photographer. She was 
         particularly noted for street photography around New York City, and has been called <em>"the most celebrated and 
         least known photographer of her time."</em>

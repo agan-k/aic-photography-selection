@@ -6,7 +6,7 @@ function AboutMann() {
   return (
     <div className="bravo about">
       <h2>Sally Mann</h2>
-      <img style={{ height: "7em", opacity: '.9' }} src={sally} />
+      <img src={sally} />
         <p><strong>Sally Mann</strong> (born May 1, 1951) is an American photographer, widely known for her 
         large-format, black-and-white photographs—at first of her young children, then later of landscapes suggesting 
         decay and death.
