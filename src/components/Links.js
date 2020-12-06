@@ -15,9 +15,6 @@ const Links = () => {
               <a href="http://www.jnevins.com/garywinograndreading.htm" target="_blank">
                  <h3>Garry Winogrand and Barbara Diamonstein, 1981–1982 - Interview</h3>
               </a>
-              <a href="http://www.jnevins.com/https://blogs.getty.edu/iris/we-are-all-the-same-a-conversation-with-josef-koudelka/.htm" target="_blank">
-                 <h3><em>"We Are All the Same:"</em> A Conversation with Josef Koudelka - Interview</h3>
-              </a>
               <a href="https://www.theguardian.com/artanddesign/2008/aug/24/photography" target="_blank">
                  <h3>40 years on: the exile comes home to Prague - Article</h3>
               </a>
