@@ -8,7 +8,10 @@ class Davidson extends Component {
       this.state = {
         isShowing: false,
       }
-    }
+   }
+   componentDidMount() {
+      window.scrollTo(0, 0);
+   }
     handleSelectThumbnail = (item, index) => {
       this.setState({
         isShowing: true,

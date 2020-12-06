@@ -9,6 +9,9 @@ class Winogrand extends Component {
       isShowing: false,
     }
   }
+  componentDidMount() {
+   window.scrollTo(0, 0);
+  }
   handleSelectThumbnail = (item, index) => {
     this.setState({
       isShowing: true,

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter, Switch, Route, Link, NavLink } from "react-router-dom"
 import './Header.css'
 import logo from '../assets/aic-logo.gif'
 import { ReactComponent as Instagram } from '../assets/icons/instagram.svg'
@@ -40,20 +40,20 @@ class Header extends React.Component {
                <li onClick={this.showDropdown} id="dropdown-open">Photographers</li>
                   
                <div className='photog-link' onClick={this.closeDropdown}>                     
-                  <li onClick={this.closeDropdown}><Link to="/winogrand">Garry Winogrand</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/arbus">Diane Arbus</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/koudelka">Josef Koudelka</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/friedlander">Lee Friedlander</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/bresson">Henri Cartier-Bresson</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/frank">Robert Frank</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/evans">Walker Evans</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/leiter">Saul Leiter</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/davidson">Bruce Davidson</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/mann">Sally Mann</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/model">Lisette Model</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/bravo">Manuel Alvarez Bravo</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/levitt">Hellen Levitt</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/brandt">Bill Brandt</Link></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/winogrand">Garry Winogrand</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/arbus">Diane Arbus</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/koudelka">Josef Koudelka</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/friedlander">Lee Friedlander</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/bresson">Henri Cartier-Bresson</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/frank">Robert Frank</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/evans">Walker Evans</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/leiter">Saul Leiter</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/davidson">Bruce Davidson</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/mann">Sally Mann</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/model">Lisette Model</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/bravo">Manuel Alvarez Bravo</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/levitt">Hellen Levitt</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/brandt">Bill Brandt</NavLink></li>
                </div>
             </div>
     
@@ -72,20 +72,20 @@ class Header extends React.Component {
                <li onClick={this.showDropdown} id="dropdown-open">Photographers</li>
                   
                <div className='photog-link' onClick={this.closeDropdown}>
-                  <li onClick={this.closeDropdown}><Link to="/winogrand">Garry Winogrand</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/arbus">Diane Arbus</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/koudelka">Josef Koudelka</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/friedlander">Lee Friedlander</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/bresson">Henri Cartier-Bresson</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/frank">Robert Frank</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/evans">Walker Evans</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/leiter">Saul Leiter</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/davidson">Bruce Davidson</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/mann">Sally Mann</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/model">Lisette Model</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/bravo">Manuel Alvarez Bravo</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/levitt">Hellen Levitt</Link></li>
-                  <li onClick={this.closeDropdown}><Link to="/brandt">Bill Brandt</Link></li>
+               <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/winogrand">Garry Winogrand</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/arbus">Diane Arbus</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/koudelka">Josef Koudelka</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/friedlander">Lee Friedlander</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/bresson">Henri Cartier-Bresson</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/frank">Robert Frank</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/evans">Walker Evans</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/leiter">Saul Leiter</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/davidson">Bruce Davidson</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/mann">Sally Mann</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/model">Lisette Model</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/bravo">Manuel Alvarez Bravo</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/levitt">Hellen Levitt</NavLink></li>
+                  <li onClick={this.closeDropdown}><NavLink activeClassName='active-link' to="/brandt">Bill Brandt</NavLink></li>
                </div>
             </div>
     

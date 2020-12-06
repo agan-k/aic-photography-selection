@@ -1,9 +1,13 @@
 header {
+  position: fixed;
+  top: 0;
   height: 5em;
   width: 100%;
+  background-color: white;
   padding-top: 2vh;
   display: flex;
   align-items: baseline;
+  z-index: 3;
 }
 header a {
    text-decoration: none;
@@ -74,18 +78,22 @@ header a {
    margin: 0;
    min-width: 150px;
 }
+.photog-link .active-link {
+   color: rgb(238, 89, 89);
+}
 .photographers-dropdown li {
   height: min-content;
   font-size: .7em;
   text-transform: none;
   display: block;
+  
 }
 .photographers-dropdown a {
   line-height: 1.6em;
   font-weight: 400;
   letter-spacing: .1em;
   margin: 0 0 0 .4em;
-  color: white;
+  /* color: white; */
 }
 #dropdown-open {
   margin-bottom: .5em;
@@ -95,6 +103,9 @@ header a {
 }
 #dropdown-open:hover {
   color: rgb(0, 0, 0);
+}
+.photographers-dropdown li a {
+  /* color: rgb(98, 138, 199); */
 }
 .photographers-dropdown li a:hover {
   color: rgb(238, 89, 89);

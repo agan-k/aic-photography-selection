@@ -7,6 +7,7 @@ body {
    /* background-color: blue; */
    font-size: 1em;
    height: 100%;
+   margin-top: 6em;
    background-color: rgb(247, 247, 247);
    
 }
@@ -21,6 +22,7 @@ li {
 /* ======== PHOTOGRAPHER.JS ============= */
 .main {
    min-height: 35vh;
+   padding-top: 1em
 }
 .thumbnail-container {
    position: relative;
