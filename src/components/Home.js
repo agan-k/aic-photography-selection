@@ -30,7 +30,7 @@ class Home extends React.Component {
           <br/>
           <div className='featured'>
           <h3>Featurd Artist</h3>
-          <span>December 2020</span>
+          <span>January 2021</span>
           <hr style={{ width: '90%', opacity: '.2'}}/>
              <Frank collection={this.props.collection}/>
           </div>
