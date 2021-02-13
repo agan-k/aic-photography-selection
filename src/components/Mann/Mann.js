@@ -29,32 +29,35 @@ class Mann extends Component {
     })
   }
   render() {
-    let imgPar = "/full/300,/0/default.jpg"; {/* required endpoint for the iiif image distribution. */}
+   // path to the image: {url}{image_id}{imgPar}
+  const url = 'https://www.artic.edu/iiif/2/'
+  const iiif = "/full/300,/0/default.jpg"
 
-    const photo_selection = this.props.collection.map((item, index) =>
-      <div className='thumbnail-container' >
-         <div className="thumbnail"
-               key={item.id}
-               onClick={() => this.handleSelectThumbnail(item, index)}>
-            <img src={item.thumbnail.url + imgPar}/>
-         </div>
-      </div> 
-      )
-
-    return (
-      <div className='main'>
-        {this.state.isShowing && (
-           <Slide
-            closeSlide={this.closeSlide}
-            index={this.state.index}
-            current_collection={this.props.collection}
-          />
-          )}
+  const collection_thumbnails = this.props.collection.map((item, index) =>
+    <div className='thumbnail-container' >
+      <div className="thumbnail"
+            key={item.id}
+            onClick={() => this.handleSelectThumbnail(item, index)}>
+         <img src={url + item.image_id + iiif}/>
+      </div>
+    </div>
+     )
+ return (
+   <div className='main'>
+     {this.state.isShowing && (
+       <Slide
+         closeSlide={this.closeSlide}
+         index={this.state.index}
+         current_collection={this.props.collection}
+         url={url}
+         iiif={iiif}
+       />
+       )}
 
          <AboutMann />
          <div className={`${this.state.isShowing ? "fade-out" : ""} main`}>
             <div className="image-gallery">
-               {photo_selection}
+               {collection_thumbnails}
             </div>
          </div>
       </div>

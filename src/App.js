@@ -1,4 +1,8 @@
 import React, { Component } from "react"
+import axios from "axios"
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import photogsData from './components/photogsData'
+import './SharedStyle.css'
 
 // =========== PHOTOGRAPHERS =============================
 import Photogs from "./components/Photogs"
@@ -23,10 +27,8 @@ import Links from "./components/Links"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
-import axios from "axios"
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import photogsData from './components/photogsData'
-import './SharedStyle.css'
+const url_collection_query = 'https://api.artic.edu/api/v1/artworks/search?q='
+const collection_query_fields = 'fields=id,title,date_display,artist_display,place_of_origin,description,thumbnail,image_id'
 
 class App extends Component {
   constructor() {
@@ -35,7 +37,7 @@ class App extends Component {
          selectPhotog: null,
          collection_api: null,
          collection: [],
-         
+         //artists
          winogrand_collection: [],
          arbus_collection: [],
          koudelka_collection: [],
@@ -52,11 +54,12 @@ class App extends Component {
          brandt_collection: []
     }
   }
-
+   
    componentDidMount() {
+      
       axios
          .get(
-            "https://aggregator-data.artic.edu/api/v1/artworks/search?q=winogrand&limit=50"
+            `${url_collection_query}winogrand&limit=50&${collection_query_fields}`
          )
          .then((response) => {
             this.setState({
@@ -64,32 +67,32 @@ class App extends Component {
             });
             console.log(response);
          }); 
+
+      axios
+         .get(
+           `${url_collection_query}diane%20arbus&limit=5&${collection_query_fields}`
+         )
+         .then((response) => {
+           this.setState({
+             arbus_collection: response.data.data
+           });
+           console.log(response);
+         });
+    
+      axios
+         .get(
+            `${url_collection_query}josef%20koudelka&${collection_query_fields}`
+         )
+         .then((response) => {
+         this.setState({
+            koudelka_collection: response.data.data,
+         });
+         console.log(response);
+         });
     
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=diane%20arbus&limit=5"
-      )
-      .then((response) => {
-        this.setState({
-          arbus_collection: response.data.data,
-        });
-        console.log(response);
-      });
-    
-      axios
-      .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=josef%20koudelka"
-      )
-      .then((response) => {
-        this.setState({
-          koudelka_collection: response.data.data,
-        });
-        console.log(response);
-      });
-    
-      axios
-      .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=lee%20friedlander&limit=49"
+         `${url_collection_query}lee%20friedlander&limit=49&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -100,7 +103,7 @@ class App extends Component {
     
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=bresson&limit=47"
+         `${url_collection_query}bresson&limit=47&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -111,7 +114,7 @@ class App extends Component {
     
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=robert%20frank&limit=48"
+         `${url_collection_query}robert%20frank&limit=48&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -122,7 +125,7 @@ class App extends Component {
     
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=walker%20evans&limit=48"
+         `${url_collection_query}walker%20evans&limit=48&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -133,7 +136,7 @@ class App extends Component {
     
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=saul%20leiter&limit=7"
+         `${url_collection_query}saul%20leiter&limit=7&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -144,7 +147,7 @@ class App extends Component {
     
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=bruce%20davidson"
+         `${url_collection_query}bruce%20davidson&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -155,7 +158,7 @@ class App extends Component {
      
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=sally%20mann&limit=16"
+         `${url_collection_query}sally%20mann&limit=16&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -166,7 +169,7 @@ class App extends Component {
      
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=lisette%20model&limit=6"
+         `${url_collection_query}lisette%20model&limit=6&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -177,7 +180,7 @@ class App extends Component {
      
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=manuel%20alvarez%20bravo"
+         `${url_collection_query}manuel%20alvarez%20bravo&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -188,7 +191,7 @@ class App extends Component {
      
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=helen%20levitt"
+         `${url_collection_query}helen%20levitt&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -198,7 +201,7 @@ class App extends Component {
       });
       axios
       .get(
-        "https://aggregator-data.artic.edu/api/v1/artworks/search?q=bill%20brandt&limit=50"
+         `${url_collection_query}bill%20brandt&limit=50&${collection_query_fields}`
       )
       .then((response) => {
         this.setState({
@@ -207,8 +210,10 @@ class App extends Component {
         console.log(response);
       });
 
-  }
+   }
+   
    render() {
+
       const photogs_list = photogsData.map(item => 
          <li onClick={() => this.handleSelectPhotog(item)}
             style={{
@@ -227,28 +232,20 @@ class App extends Component {
             <p>{item}</p>)}
          </div>
       )
+
+      const image_id = this.state.arbus_collection[0]
+      console.log(this.state.arbus_collection[0])
     return (
        <div className="App">
           <div className='layout'>
+             
          <Header />
-
                
                <Switch>
                   <Route exact path="/">
-                     <Home collection={this.state.frank_collection}/>
+                     <Home collection={this.state.levitt_collection}/>
                   </Route>
-                  
-                  <Route exact path="/photogs">
-                     <Photogs
-                        selectPhotog={this.state.selectPhotog}
-                        collection={this.state.winogrand_collection}
-                        photog={photog}
-                        collection_api={this.state.collection_api}
-                     />
-                  </Route>
-                  
-
-
+                 
                   <Route path="/winogrand">
                   <Winogrand collection={this.state.winogrand_collection} />
                   </Route>

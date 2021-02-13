@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import bus from '../assets/bus.jpg'
 import Frank from './Frank/Frank'
+import Levitt from './Levitt/Levitt'
 
 class Home extends React.Component {
   constructor(props) {
@@ -30,9 +31,9 @@ class Home extends React.Component {
           <br/>
           <div className='featured'>
           <h3>Featurd Artist</h3>
-          <span>January 2021</span>
+          <span>February 2021</span>
           <hr style={{ width: '90%', opacity: '.2'}}/>
-             <Frank collection={this.props.collection}/>
+             <Levitt collection={this.props.collection}/>
           </div>
       </div>
     )

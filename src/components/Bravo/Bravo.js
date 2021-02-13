@@ -28,19 +28,20 @@ class Bravo extends Component {
          isShowing: false,
       })
    }
-  render() {
-    let imgPar = "/full/400,/0/default.jpg"; {/* required endpoint for the iiif image distribution. */}
-
-    const photo_selection = this.props.collection.map((item, index) =>
-      <div className='thumbnail-container' >
+   render() {
+      // path to the image: {url}{image_id}{imgPar}
+     const url = 'https://www.artic.edu/iiif/2/'
+     const iiif = "/full/300,/0/default.jpg"
+ 
+     const collection_thumbnails = this.props.collection.map((item, index) =>
+       <div className='thumbnail-container' >
          <div className="thumbnail"
                key={item.id}
                onClick={() => this.handleSelectThumbnail(item, index)}>
-            <img src={item.thumbnail.url + imgPar}/>
+            <img src={url + item.image_id + iiif}/>
          </div>
-   </div>
+       </div>
         )
-
     return (
       <div className='main'>
         {this.state.isShowing && (
@@ -48,13 +49,15 @@ class Bravo extends Component {
             closeSlide={this.closeSlide}
             index={this.state.index}
             current_collection={this.props.collection}
+            url={url}
+            iiif={iiif}
           />
           )}
 
          <AboutBravo />
          <div className={`${this.state.isShowing ? "fade-out" : ""} main`}>
             <div className="image-gallery">
-               {photo_selection}
+               {collection_thumbnails}
             </div>
          </div>
       </div>

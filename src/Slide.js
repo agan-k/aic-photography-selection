@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import 'font-awesome/css/font-awesome.css'
-// import './SharedStyle.css'
 import './Slide.css'
 
 export default class Slide extends Component {
@@ -31,7 +30,10 @@ export default class Slide extends Component {
       })
   }
    
-  render() {
+   render() {
+     const iiifHq = "/full/800,/0/default.jpg" // higher quality image 
+      
+
     // ===========================
     const BackArrow = (props) => (
       <div className='arrow back' onClick={props.previousImage}>
@@ -49,11 +51,10 @@ export default class Slide extends Component {
 
     return (
       <div className="slide-container">
-        <div className='close' onClick={this.props.closeSlide}>
-             &times; 
-        </div>
           
-        
+        <div className='close' onClick={this.props.closeSlide}>
+         &times; 
+        </div>
           
         <div className="slide">
         {this.state.count !== 0 ?
@@ -61,13 +62,12 @@ export default class Slide extends Component {
         {this.props.current_collection.map((item) => {
          if (this.props.current_collection.indexOf(item) === this.state.count) {
             return (
-               
                <div className={`${item.thumbnail.height > item.thumbnail.width ? 'vertical' : ''} slide-img-caption-container`}
                   // className='slide-img-container'
                   key={item.id}> 
-                   <img src={item.thumbnail.url + imgPar} alt='' />
-                   <h3>{item.title}</h3>
-                   <p>{item.thumbnail.alt_text}</p>
+                   <img src={this.props.url + item.image_id + iiifHq} alt='' />
+                   <h3>{item.date_display}</h3>
+                   <p>{item.title}</p>
                 </div>
               )
              }
@@ -77,8 +77,6 @@ export default class Slide extends Component {
           {this.state.count !== (this.props.current_collection.length - 1) ?
          <NextArrow nextImage={this.nextImage} /> : ''}
          </div>
-          
-          
       </div>
      )
    }
